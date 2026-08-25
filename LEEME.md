@@ -36,10 +36,10 @@ y nunca se agendan dos clientas a la misma hora.
 
 ### Paso 2 — Crear DOS tipos de cita, ambos de 1 hora
 
-| Tipo de cita | Duración | Ubicación en Calendly |
-|---|---|---|
-| Cita por videollamada | 60 min | Google Meet o Zoom |
-| Cita en el atelier | 60 min | Dirección física |
+| Tipo de cita          | Duración | Ubicación en Calendly |
+| --------------------- | -------- | --------------------- |
+| Cita por videollamada | 60 min   | Google Meet o Zoom    |
+| Cita en el atelier    | 60 min   | Dirección física      |
 
 Configura también los horarios de atención y cuánta anticipación mínima quieres
 (por ejemplo, que nadie pueda agendar para dentro de 2 horas).
@@ -51,8 +51,8 @@ archivo) y reemplaza las direcciones completas:
 
 ```js
 var CALENDLY = {
-  video:      'https://calendly.com/TU-USUARIO/cita-videollamada',
-  presencial: 'https://calendly.com/TU-USUARIO/cita-atelier'
+  video: "https://calendly.com/TU-USUARIO/cita-videollamada",
+  presencial: "https://calendly.com/TU-USUARIO/cita-atelier",
 };
 ```
 
@@ -71,10 +71,47 @@ Todos los precios viven en **un solo lugar**, en el `<script>` al final del arch
 
 ```js
 var PAQUETES = [
-  { id:'silver',  nombre:'Silver',          cuota:1000, tramos:[[30,2500],[50,2800],[80,3500]] },
-  { id:'gold',    nombre:'Gold',            cuota:1500, tramos:[[100,4500],[200,5800],[300,6800]] },
-  { id:'diamond', nombre:'Diamond',         cuota:2000, tramos:[[100,7800],[200,8800],[300,9800]], destacado:true },
-  { id:'royal',   nombre:'Royal Signature', cuota:2500, tramos:[[100,9900],[200,11300],[300,12800]] }
+  {
+    id: "silver",
+    nombre: "Silver",
+    cuota: 1000,
+    tramos: [
+      [30, 2500],
+      [50, 2800],
+      [80, 3500],
+    ],
+  },
+  {
+    id: "gold",
+    nombre: "Gold",
+    cuota: 1500,
+    tramos: [
+      [100, 4500],
+      [200, 5800],
+      [300, 6800],
+    ],
+  },
+  {
+    id: "diamond",
+    nombre: "Diamond",
+    cuota: 2000,
+    tramos: [
+      [100, 7800],
+      [200, 8800],
+      [300, 9800],
+    ],
+    destacado: true,
+  },
+  {
+    id: "royal",
+    nombre: "Royal Signature",
+    cuota: 2500,
+    tramos: [
+      [100, 9900],
+      [200, 11300],
+      [300, 12800],
+    ],
+  },
 ];
 ```
 
@@ -93,7 +130,7 @@ en la cita.
 
 La lista de precios **no tiene un tramo de Silver arriba de 80 invitados**.
 La página no inventa esa cifra: si el deslizador pasa de 80, la tarjeta de
-Silver se atenúa y dice *"Consúltalo en tu cita"*.
+Silver se atenúa y dice _"Consúltalo en tu cita"_.
 
 **Si Silver sí se ofrece para eventos más grandes**, agrega el tramo:
 
@@ -151,10 +188,6 @@ Estos tres aparecen en el pie como "pendiente", en gris:
 Reemplaza el texto en las dos versiones (español e inglés) y quita la clase
 `pendiente` de la etiqueta `<span>` correspondiente en el HTML para que dejen
 de verse en gris.
-
-Ya están puestos y funcionando: teléfono **+1 803-846-8359** (como enlace de
-llamada y de WhatsApp con mensaje prellenado), **Instagram @lo_v_collection**
-y **Facebook**.
 
 ---
 
