@@ -1,0 +1,2365 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LO-V Fashion Design | Vestidos y Decoración de Quinceañera</title>
+    <meta
+      name="description"
+      content="Vestidos de quinceañera a tu medida y decoración de evento. Agenda tu cita de cotización con Lucero Ortega Viana — videollamada o presencial, 1 hora, sin costo."
+    />
+    <link rel="icon" href="img/logo-lov.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap"
+    />
+    <style>
+      /* ============================================================
+   LO-V FASHION DESIGN — página de citas
+   Negro y oro: la paleta real del atelier.
+   Tema único a propósito; todos los colores se declaran
+   explícitamente para que la página se sostenga en cualquier visor.
+   ============================================================ */
+      :root {
+        --negro: #0b0b0d;
+        --superficie: #141416;
+        --superficie-2: #1c1c1f;
+        --linea: #2a2a2e;
+        --linea-oro: rgba(201, 162, 39, 0.32);
+
+        --oro: #c9a227; /* fondos, filetes, iconos, texto ≥24px */
+        --oro-claro: #e8c670; /* texto pequeño — el único que pasa AA */
+        --oro-tenue: rgba(201, 162, 39, 0.12);
+
+        --marfil: #f4f0e8;
+        --apagado: #a8a296;
+        --sobre-oro: #12100b;
+
+        --ok: #6fbf8f;
+
+        --r-s: 4px;
+        --r-m: 10px;
+        --r-l: 18px;
+        --pad: clamp(1.1rem, 4vw, 2.6rem);
+        --sec: clamp(3.5rem, 8vw, 7rem);
+        --max: 1240px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 92px;
+      }
+      body {
+        margin: 0;
+        background: var(--negro);
+        color: var(--marfil);
+        font-family:
+          "Jost",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 400;
+        line-height: 1.1;
+        color: var(--marfil);
+        text-wrap: balance;
+      }
+      p {
+        margin: 0;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      :focus-visible {
+        outline: 2px solid var(--oro-claro);
+        outline-offset: 3px;
+        border-radius: var(--r-s);
+      }
+
+      .env {
+        width: 100%;
+        max-width: var(--max);
+        margin-inline: auto;
+        padding-inline: var(--pad);
+      }
+      .sec {
+        padding-block: var(--sec);
+      }
+
+      .salto {
+        position: absolute;
+        left: 1rem;
+        top: -100px;
+        z-index: 999;
+        background: var(--oro);
+        color: var(--sobre-oro);
+        padding: 0.8rem 1.2rem;
+        border-radius: var(--r-m);
+        font-weight: 600;
+        transition: top 0.2s;
+      }
+      .salto:focus {
+        top: 1rem;
+      }
+
+      .script {
+        font-family: "Pinyon Script", cursive;
+        font-weight: 400;
+      }
+      .cejilla {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--oro-claro);
+      }
+      .cejilla::before {
+        content: "";
+        width: 26px;
+        height: 1px;
+        background: var(--oro);
+        flex-shrink: 0;
+      }
+
+      /* ---------- Botones ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        min-height: 54px;
+        padding: 0.9rem 2rem;
+        border-radius: var(--r-m);
+        font-family: "Jost", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        transition:
+          background-color 0.2s,
+          color 0.2s,
+          border-color 0.2s,
+          transform 0.12s;
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+      .btn-oro {
+        background: var(--oro);
+        color: var(--sobre-oro);
+      }
+      .btn-oro:hover {
+        background: var(--oro-claro);
+      }
+      .btn-linea {
+        border-color: var(--linea-oro);
+        color: var(--marfil);
+      }
+      .btn-linea:hover {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+        background: var(--oro-tenue);
+      }
+      .btn-bloque {
+        width: 100%;
+      }
+      .btn-chico {
+        min-height: 42px;
+        padding: 0.45rem 1.1rem;
+        font-size: 0.76rem;
+      }
+
+      /* ---------- Barra superior ---------- */
+      .barra {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: rgba(11, 11, 13, 0.86);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--linea);
+      }
+      .barra .env {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 74px;
+      }
+      .marca {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      /* Sin recorte circular: el laurel del emblema se cortaría por los lados */
+      .marca img {
+        width: 46px;
+        height: 46px;
+        border-radius: var(--r-s);
+        object-fit: contain;
+      }
+      .marca-txt {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+      .marca-txt b {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: var(--marfil);
+      }
+      .marca-txt span {
+        font-size: 0.6rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--apagado);
+      }
+      .barra-acc {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .idioma {
+        display: inline-flex;
+        gap: 2px;
+        padding: 3px;
+        border: 1px solid var(--linea);
+        border-radius: var(--r-m);
+      }
+      .idioma button {
+        padding: 0.3rem 0.62rem;
+        border-radius: var(--r-s);
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        color: var(--apagado);
+        transition:
+          background-color 0.2s,
+          color 0.2s;
+      }
+      .idioma button[aria-pressed="true"] {
+        background: var(--oro);
+        color: var(--sobre-oro);
+      }
+      .tel-barra {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.9rem;
+        color: var(--marfil);
+        white-space: nowrap;
+      }
+      .tel-barra svg {
+        width: 16px;
+        height: 16px;
+        color: var(--oro-claro);
+        flex-shrink: 0;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        min-height: min(94vh, 860px);
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 28%;
+      }
+      .hero-velo {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(11, 11, 13, 0.62) 0%,
+          rgba(11, 11, 13, 0.35) 38%,
+          rgba(11, 11, 13, 0.92) 88%,
+          var(--negro) 100%
+        );
+      }
+      .hero .env {
+        position: relative;
+        padding-bottom: clamp(3rem, 7vw, 5.5rem);
+        padding-top: 6rem;
+      }
+      .hero h1 {
+        font-size: clamp(2.7rem, 7.5vw, 5.4rem);
+        max-width: 15ch;
+        margin-top: 1.2rem;
+        font-weight: 300;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--oro-claro);
+      }
+      .hero .firma {
+        display: block;
+        margin-top: 1.4rem;
+        font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+        color: var(--oro-claro);
+      }
+      .hero-acc {
+        margin-top: 2rem;
+      }
+      .hero-micro {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1.6rem;
+        margin-top: 1.7rem;
+        font-size: 0.88rem;
+        color: var(--apagado);
+      }
+      .hero-micro span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+      }
+      .hero-micro svg {
+        width: 15px;
+        height: 15px;
+        color: var(--oro-claro);
+        flex-shrink: 0;
+      }
+
+      /* ---------- Encabezado de sección ---------- */
+      .enc {
+        margin-bottom: 2.8rem;
+      }
+      .enc.centro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .enc h2 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        margin-top: 1rem;
+        font-weight: 300;
+      }
+      .enc p {
+        margin-top: 1rem;
+        color: var(--apagado);
+        max-width: 56ch;
+      }
+
+      /* ---------- Lookbook ---------- */
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+      }
+      .foto {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--r-m);
+        background: var(--superficie);
+        cursor: zoom-in;
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+      }
+      .foto img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .foto:hover img {
+        transform: scale(1.045);
+      }
+      .foto::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid transparent;
+        border-radius: var(--r-m);
+        transition: border-color 0.3s;
+        pointer-events: none;
+      }
+      .foto:hover::after {
+        border-color: var(--linea-oro);
+      }
+      .foto.alta {
+        grid-row: span 2;
+      }
+      .foto.alta img {
+        aspect-ratio: 3/5;
+      }
+      .foto.ancha {
+        grid-column: span 2;
+      }
+      .foto.ancha img {
+        aspect-ratio: 16/11;
+      }
+
+      /* ---------- Lightbox ---------- */
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(6, 6, 8, 0.96);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(0.8rem, 3vw, 2.5rem);
+      }
+      .lb.abierto {
+        display: flex;
+      }
+      .lb img {
+        max-width: 100%;
+        max-height: 86vh;
+        width: auto;
+        border-radius: var(--r-m);
+        object-fit: contain;
+      }
+      .lb-cerrar {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--linea);
+        border-radius: 50%;
+        color: var(--marfil);
+        background: rgba(20, 20, 22, 0.8);
+      }
+      .lb-cerrar:hover {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+      }
+      .lb-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--linea);
+        border-radius: 50%;
+        color: var(--marfil);
+        background: rgba(20, 20, 22, 0.8);
+      }
+      .lb-nav:hover {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+      }
+      .lb-prev {
+        left: 1rem;
+      }
+      .lb-sig {
+        right: 1rem;
+      }
+      .lb-nav svg,
+      .lb-cerrar svg {
+        width: 22px;
+        height: 22px;
+      }
+      .lb-pie {
+        position: absolute;
+        bottom: 1.1rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--apagado);
+        letter-spacing: 0.06em;
+      }
+
+      /* ---------- Paquetes ---------- */
+      .paq-sec {
+        background: var(--superficie);
+        border-block: 1px solid var(--linea);
+      }
+      .deslizador {
+        max-width: 640px;
+        margin: 0 auto 3rem;
+        text-align: center;
+      }
+      .desl-valor {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.6rem, 6vw, 3.8rem);
+        color: var(--oro-claro);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+      .desl-valor small {
+        display: block;
+        font-family: "Jost", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--apagado);
+        margin-top: 0.5rem;
+      }
+      .desl-input {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 3px;
+        margin-top: 1.8rem;
+        background: var(--linea);
+        border-radius: 2px;
+        outline-offset: 8px;
+      }
+      .desl-input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--oro);
+        border: 3px solid var(--negro);
+        box-shadow: 0 0 0 1px var(--oro);
+        cursor: grab;
+      }
+      .desl-input::-moz-range-thumb {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--oro);
+        border: 3px solid var(--negro);
+        box-shadow: 0 0 0 1px var(--oro);
+        cursor: grab;
+      }
+      .desl-topes {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.7rem;
+        font-size: 0.72rem;
+        color: var(--apagado);
+        letter-spacing: 0.08em;
+      }
+
+      .paquetes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+      }
+      .paq {
+        display: flex;
+        flex-direction: column;
+        background: var(--negro);
+        border: 1px solid var(--linea);
+        border-radius: var(--r-l);
+        padding: 1.9rem 1.6rem 1.6rem;
+        transition:
+          border-color 0.3s,
+          transform 0.3s;
+      }
+      .paq:hover {
+        border-color: var(--linea-oro);
+        transform: translateY(-4px);
+      }
+      .paq.destacado {
+        border-color: var(--oro);
+      }
+      .paq.apagada {
+        opacity: 0.5;
+      }
+      .paq-cinta {
+        position: absolute;
+        top: -1px;
+        right: 1.4rem;
+        background: var(--oro);
+        color: var(--sobre-oro);
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0 0 var(--r-s) var(--r-s);
+      }
+      .paq {
+        position: relative;
+      }
+      .paq h3 {
+        font-size: 2rem;
+        letter-spacing: 0.06em;
+        font-weight: 400;
+        min-height: 2.2em;
+      }
+      .paq .lema {
+        font-size: 0.85rem;
+        color: var(--apagado);
+        margin-top: 0.3rem;
+        min-height: 2.4em;
+      }
+      .paq-precio {
+        margin-top: 1.3rem;
+        padding-top: 1.3rem;
+        border-top: 1px solid var(--linea);
+      }
+      .paq-cifra {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.9rem;
+        line-height: 1;
+        color: var(--oro-claro);
+        font-variant-numeric: tabular-nums;
+      }
+      .paq-cifra.consulta {
+        font-size: 1.45rem;
+        color: var(--marfil);
+        line-height: 1.3;
+      }
+      .paq-tramo {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--apagado);
+        margin-top: 0.5rem;
+        letter-spacing: 0.04em;
+        min-height: 2.2em;
+      }
+      .paq-cuota {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.9rem;
+        font-size: 0.8rem;
+        color: var(--marfil);
+        background: var(--oro-tenue);
+        border: 1px solid var(--linea-oro);
+        border-radius: var(--r-s);
+        padding: 0.32rem 0.7rem;
+      }
+      .paq ul {
+        list-style: none;
+        margin: 1.4rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+      }
+      .paq li {
+        display: flex;
+        gap: 0.55rem;
+        font-size: 0.88rem;
+        line-height: 1.45;
+        color: var(--marfil);
+      }
+      .paq li svg {
+        width: 14px;
+        height: 14px;
+        color: var(--oro);
+        flex-shrink: 0;
+        margin-top: 0.42em;
+      }
+      .paq-mas {
+        margin-top: 1.1rem;
+        font-size: 0.78rem;
+        color: var(--oro-claro);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0;
+      }
+      .paq-mas svg {
+        width: 13px;
+        height: 13px;
+        transition: transform 0.25s;
+      }
+      .paq-mas[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+      }
+      .paq-detalle {
+        display: none;
+        margin-top: 0.9rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid var(--linea);
+        font-size: 0.83rem;
+        color: var(--apagado);
+        line-height: 1.6;
+      }
+      .paq-detalle.visible {
+        display: block;
+      }
+      .paq-detalle p + p {
+        margin-top: 0.6rem;
+      }
+      .paq-detalle b {
+        color: var(--marfil);
+        font-weight: 500;
+      }
+      .paq .btn {
+        margin-top: 1.5rem;
+      }
+      .paq-nota {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.84rem;
+        color: var(--apagado);
+      }
+      .paq-nota svg {
+        width: 15px;
+        height: 15px;
+        color: var(--oro-claro);
+        vertical-align: -2px;
+        margin-right: 0.35rem;
+      }
+
+      /* ---------- Cómo es la cita ---------- */
+      .pasos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .paso {
+        text-align: center;
+      }
+      .paso-ico {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.1rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--linea-oro);
+        border-radius: 50%;
+        color: var(--oro-claro);
+      }
+      .paso-ico svg {
+        width: 26px;
+        height: 26px;
+      }
+      .paso h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.45rem;
+      }
+      .paso p {
+        font-size: 0.92rem;
+        color: var(--apagado);
+      }
+
+      /* ---------- Calendario ---------- */
+      .cal-sec {
+        background: var(--superficie);
+        border-top: 1px solid var(--linea);
+      }
+      .cal-tipo {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .cal-tipo button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.4rem;
+        border: 1px solid var(--linea);
+        border-radius: var(--r-m);
+        font-size: 0.88rem;
+        color: var(--apagado);
+        transition: all 0.2s;
+      }
+      .cal-tipo button svg {
+        width: 17px;
+        height: 17px;
+      }
+      .cal-tipo button[aria-pressed="true"] {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+        background: var(--oro-tenue);
+      }
+      .cal-caja {
+        max-width: 900px;
+        margin-inline: auto;
+        border: 1px solid var(--linea);
+        border-radius: var(--r-l);
+        overflow: hidden;
+        background: var(--negro);
+        min-height: 640px;
+      }
+      .cal-espera {
+        padding: clamp(2rem, 5vw, 3.4rem);
+        text-align: center;
+      }
+      .cal-espera .marco {
+        border: 1px dashed var(--linea-oro);
+        border-radius: var(--r-m);
+        padding: clamp(1.6rem, 4vw, 2.6rem);
+      }
+      .cal-espera h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+      }
+      .cal-espera p {
+        color: var(--apagado);
+        font-size: 0.92rem;
+        max-width: 46ch;
+        margin-inline: auto;
+      }
+      .cal-espera .rejilla {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        max-width: 340px;
+        margin: 1.8rem auto;
+      }
+      .cal-espera .rejilla i {
+        aspect-ratio: 1;
+        border-radius: var(--r-s);
+        background: var(--superficie-2);
+        border: 1px solid var(--linea);
+      }
+      .cal-espera .rejilla i.on {
+        border-color: var(--linea-oro);
+        background: var(--oro-tenue);
+      }
+      .cal-espera .acciones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: center;
+        margin-top: 1.6rem;
+      }
+
+      /* ---------- Pie ---------- */
+      .pie {
+        background: var(--negro);
+        border-top: 1px solid var(--linea);
+        padding-top: clamp(2.8rem, 6vw, 4rem);
+      }
+      .pie-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+        padding-bottom: 2.4rem;
+      }
+      .pie-marca p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--apagado);
+        max-width: 34ch;
+      }
+      .pie h3 {
+        font-size: 0.7rem;
+        font-family: "Jost", sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--oro-claro);
+        margin-bottom: 1rem;
+      }
+      .pie ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.7rem;
+      }
+      .pie li {
+        display: flex;
+        gap: 0.6rem;
+        font-size: 0.92rem;
+        color: var(--apagado);
+        align-items: flex-start;
+      }
+      .pie li svg {
+        width: 16px;
+        height: 16px;
+        color: var(--oro-claro);
+        flex-shrink: 0;
+        margin-top: 0.3em;
+      }
+      .pie a:hover {
+        color: var(--marfil);
+      }
+      .pie .pendiente {
+        color: #8a857b;
+        font-style: italic;
+      }
+      .redes {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1.3rem;
+      }
+      .redes a {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--linea);
+        border-radius: var(--r-m);
+        color: var(--apagado);
+        transition: all 0.2s;
+      }
+      .redes a:hover {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+        background: var(--oro-tenue);
+      }
+      .redes svg {
+        width: 19px;
+        height: 19px;
+      }
+      .pie-legal {
+        border-top: 1px solid var(--linea);
+        padding-block: 1.4rem 1.6rem;
+        text-align: center;
+        font-size: 0.78rem;
+        color: #8a857b;
+      }
+      .pie-lema {
+        text-align: center;
+        padding-bottom: 2rem;
+        font-size: 1.05rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--oro-claro);
+        font-weight: 300;
+      }
+
+      /* ---------- Barra fija móvil ---------- */
+      .movil {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 70;
+        gap: 0.6rem;
+        padding: 0.6rem var(--pad) calc(0.6rem + env(safe-area-inset-bottom));
+        background: rgba(11, 11, 13, 0.95);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid var(--linea);
+      }
+      .movil .btn {
+        flex: 1;
+        min-height: 50px;
+        padding-inline: 0.6rem;
+        font-size: 0.78rem;
+      }
+
+      /* ---------- Aparición ---------- */
+      .rev {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .rev.dentro {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (min-width: 640px) {
+        .galeria {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.7rem;
+        }
+        .pasos {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .paquetes {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .pie-grid {
+          grid-template-columns: 1.4fr 1fr 1fr;
+        }
+      }
+      @media (min-width: 1024px) {
+        .galeria {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .paquetes {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 639px) {
+        .movil {
+          display: flex;
+        }
+        body {
+          padding-bottom: 74px;
+        }
+        .tel-barra span {
+          display: none;
+        }
+        .foto.ancha {
+          grid-column: span 2;
+        }
+        .foto.alta {
+          grid-row: span 1;
+        }
+        .foto.alta img {
+          aspect-ratio: 3/4;
+        }
+        .lb-nav {
+          width: 44px;
+          height: 44px;
+        }
+        .lb-prev {
+          left: 0.4rem;
+        }
+        .lb-sig {
+          right: 0.4rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+        .rev {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="salto" href="#calendario" data-i18n="saltoCita"
+      >Ir a agendar mi cita</a
+    >
+
+    <!-- ===== Barra superior ===== -->
+    <header class="barra">
+      <div class="env">
+        <a class="marca" href="#top" aria-label="LO-V Fashion Design">
+          <img src="img/logo-lov.webp" alt="" width="46" height="46" />
+          <span class="marca-txt">
+            <b>LO-V</b>
+            <span data-i18n="marcaSub">Fashion Design</span>
+          </span>
+        </a>
+        <div class="barra-acc">
+          <a class="tel-barra" href="tel:+18038468359">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"
+              />
+            </svg>
+            <span>803-846-8359</span>
+          </a>
+          <div class="idioma" role="group" aria-label="Idioma / Language">
+            <button type="button" data-lang="es" aria-pressed="true">ES</button>
+            <button type="button" data-lang="en" aria-pressed="false">
+              EN
+            </button>
+          </div>
+          <a
+            class="btn btn-oro btn-chico"
+            href="#calendario"
+            data-i18n="ctaBarra"
+            >Agendar</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <img
+          class="hero-img"
+          src="img/hero-vestido-azul-floral.webp"
+          alt="Vestido de quinceañera azul con apliques florales dorados en el atelier LO-V"
+          width="1152"
+          height="2048"
+          fetchpriority="high"
+        />
+        <div class="hero-velo" aria-hidden="true"></div>
+        <div class="env">
+          <span class="cejilla" data-i18n="heroCejilla"
+            >Atelier de alta costura · Columbia, SC</span
+          >
+          <h1 data-i18n="heroTitulo">
+            Tu vestido no existe todavía. <em>Lo diseñamos juntas.</em>
+          </h1>
+          <span class="script firma">by Lucero Ortega Viana</span>
+          <div class="hero-acc">
+            <a class="btn btn-oro" href="#calendario" data-i18n="heroCta"
+              >Agenda tu cita</a
+            >
+          </div>
+          <div class="hero-micro">
+            <span
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+              ><span data-i18n="heroM1">Videollamada o presencial</span></span
+            >
+            <span
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+              ><span data-i18n="heroM2">1 hora con la diseñadora</span></span
+            >
+            <span
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+              ><span data-i18n="heroM3">Sin costo</span></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Lookbook ===== -->
+      <section class="sec" id="galeria" aria-labelledby="gal-h">
+        <div class="env">
+          <div class="enc centro rev">
+            <span class="cejilla" data-i18n="galCejilla">Nuestro trabajo</span>
+            <h2 id="gal-h" data-i18n="galTitulo">
+              Cada uno, hecho una sola vez.
+            </h2>
+            <p data-i18n="galSub">
+              Vestidos y montajes reales, salidos de este taller.
+            </p>
+          </div>
+          <div class="galeria" id="galeria-grid"></div>
+        </div>
+      </section>
+
+      <!-- ===== Paquetes ===== -->
+      <section class="sec paq-sec" id="paquetes" aria-labelledby="paq-h">
+        <div class="env">
+          <div class="enc centro rev">
+            <span class="cejilla" data-i18n="paqCejilla">Paquetes</span>
+            <h2 id="paq-h" data-i18n="paqTitulo">
+              Todo para tus XV, en un solo lugar.
+            </h2>
+            <p data-i18n="paqSub">
+              Vestido y decoración juntos. Mueve el control para ver tu precio.
+            </p>
+          </div>
+
+          <div class="deslizador rev">
+            <div class="desl-valor">
+              <span id="desl-num">100</span
+              ><small data-i18n="deslLabel">Invitados que esperas</small>
+            </div>
+            <input
+              class="desl-input"
+              id="desl"
+              type="range"
+              min="20"
+              max="300"
+              step="10"
+              value="100"
+              aria-label="Número de invitados"
+              aria-describedby="desl-num"
+            />
+            <div class="desl-topes"><span>20</span><span>300</span></div>
+          </div>
+
+          <div class="paquetes" id="paquetes-grid"></div>
+
+          <p class="paq-nota rev">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
+            </svg>
+            <span data-i18n="paqNota"
+              >Carpa, mesas y sillas incluidas en cualquier paquete, si tu
+              evento las necesita.</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Cómo es la cita ===== -->
+      <section class="sec" id="cita" aria-labelledby="cita-h">
+        <div class="env">
+          <div class="enc centro rev">
+            <span class="cejilla" data-i18n="citaCejilla">La cita</span>
+            <h2 id="cita-h" data-i18n="citaTitulo">
+              Una hora que lo define todo.
+            </h2>
+          </div>
+          <div class="pasos">
+            <div class="paso rev">
+              <span class="paso-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="6" width="14" height="12" rx="2" />
+                  <path d="m16 11 6-3.5v9L16 13" /></svg
+              ></span>
+              <h3 data-i18n="paso1t">Videollamada o presencial</h3>
+              <p data-i18n="paso1p">
+                Desde tu casa, estés donde estés, o en el atelier tomando café
+                con Lucero.
+              </p>
+            </div>
+            <div class="paso rev">
+              <span class="paso-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3.5 2" /></svg
+              ></span>
+              <h3 data-i18n="paso2t">1 hora completa</h3>
+              <p data-i18n="paso2p">
+                Hablamos de tu tema, tus colores y tu presupuesto. Sin prisa y
+                sin guion de ventas.
+              </p>
+            </div>
+            <div class="paso rev">
+              <span class="paso-ico" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4l1.4 1.4L12 21.8l7.4-7.4 1.4-1.4a5.2 5.2 0 0 0 0-7.4Z"
+                  /></svg
+              ></span>
+              <h3 data-i18n="paso3t">Sin costo ni compromiso</h3>
+              <p data-i18n="paso3p">
+                Sales con tu cotización en la mano, decidas contratar o no.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Calendario ===== -->
+      <section class="sec cal-sec" id="calendario" aria-labelledby="cal-h">
+        <div class="env">
+          <div class="enc centro rev">
+            <span class="cejilla" data-i18n="calCejilla">Agenda</span>
+            <h2 id="cal-h" data-i18n="calTitulo">Elige tu día y tu hora.</h2>
+            <p data-i18n="calSub">
+              Citas de 1 hora. Recibes confirmación y recordatorio automáticos.
+            </p>
+          </div>
+
+          <div class="cal-tipo" role="group" aria-label="Tipo de cita">
+            <button type="button" data-tipo="video" aria-pressed="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="2" y="6" width="14" height="12" rx="2" />
+                <path d="m16 11 6-3.5v9L16 13" />
+              </svg>
+              <span data-i18n="calTipoVideo">Por videollamada</span>
+            </button>
+            <button type="button" data-tipo="presencial" aria-pressed="false">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" />
+                <circle cx="12" cy="10" r="2.6" />
+              </svg>
+              <span data-i18n="calTipoPres">En el atelier</span>
+            </button>
+          </div>
+
+          <div class="cal-caja" id="cal-caja">
+            <!-- El widget real de Calendly se monta aquí. Ver LEEME.md -->
+            <div
+              class="calendly-inline-widget"
+              id="cal-widget"
+              data-url=""
+              style="min-width: 320px; height: 640px"
+            ></div>
+            <div class="cal-espera" id="cal-espera" hidden>
+              <div class="marco">
+                <h3 data-i18n="calEsperaT">
+                  Aquí va el calendario de reservas
+                </h3>
+                <p data-i18n="calEsperaP">
+                  Esta vista previa no carga scripts externos, así que el widget
+                  de Calendly no aparece. En el sitio publicado, aquí se ve el
+                  calendario real con los horarios disponibles de Lucero.
+                </p>
+                <div class="rejilla" aria-hidden="true"></div>
+                <div class="acciones">
+                  <a
+                    class="btn btn-oro"
+                    id="cal-wa"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    data-i18n="calEsperaWa"
+                    >Escribir por WhatsApp</a
+                  >
+                  <a
+                    class="btn btn-linea"
+                    href="tel:+18038468359"
+                    data-i18n="calEsperaTel"
+                    >Llamar ahora</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Pie ===== -->
+    <footer class="pie">
+      <div class="env">
+        <div class="pie-grid">
+          <div class="pie-marca">
+            <a class="marca" href="#top">
+              <img
+                src="img/logo-lov.webp"
+                alt=""
+                width="46"
+                height="46"
+                loading="lazy"
+              />
+              <span class="marca-txt"
+                ><b>LO-V</b
+                ><span data-i18n="marcaSub">Fashion Design</span></span
+              >
+            </a>
+            <p data-i18n="pieLema">
+              Vestidos de quinceañera a la medida y decoración de evento.
+              Diseñados y confeccionados por Lucero Ortega Viana.
+            </p>
+            <div class="redes">
+              <a
+                href="https://www.instagram.com/lo_v_collection"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="3.8" />
+                  <circle
+                    cx="17.2"
+                    cy="6.8"
+                    r="1.2"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/share/1CwvALjEwK/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/18038468359"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11.4 11.4 0 0 1-4.4-4c-.3-.5-.7-1.2-.7-2s.4-1.3.6-1.5c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.5.2.4.8 1.2 1.6 1.9 1 .9 1.8 1.1 2.1 1.3.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.1.5 0l1.8.9c.2.1.4.2.4.3.1.1.1.5 0 1.1Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 data-i18n="pieContacto">Contacto</h3>
+            <ul>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"
+                  /></svg
+                ><a href="tel:+18038468359">+1 803-846-8359</a>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="3.8" /></svg
+                ><a
+                  href="https://www.instagram.com/lo_v_collection"
+                  target="_blank"
+                  rel="noopener"
+                  >@lo_v_collection</a
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" /></svg
+                ><span class="pendiente" data-i18n="pieCorreo"
+                  >Correo — pendiente</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 data-i18n="pieAtelier">Atelier</h3>
+            <ul>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.6" /></svg
+                ><span class="pendiente" data-i18n="pieDir"
+                  >Dirección — pendiente</span
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3.5 2" /></svg
+                ><span class="pendiente" data-i18n="pieHorario"
+                  >Horarios — pendiente</span
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                ><span data-i18n="pieCitas">Atención con cita previa</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="pie-lema">Cada detalle, hecho con amor</p>
+        <p class="pie-legal">
+          © <span id="anio">2026</span> LO-V Fashion Design &amp; Event Planner
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== Barra fija móvil ===== -->
+    <div class="movil">
+      <a class="btn btn-linea" href="tel:+18038468359" data-i18n="movilLlamar"
+        >Llamar</a
+      >
+      <a class="btn btn-oro" href="#calendario" data-i18n="movilAgendar"
+        >Agendar cita</a
+      >
+    </div>
+
+    <!-- ===== Lightbox ===== -->
+    <div
+      class="lb"
+      id="lb"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Galería"
+    >
+      <button
+        class="lb-cerrar"
+        id="lb-cerrar"
+        type="button"
+        aria-label="Cerrar"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <button
+        class="lb-nav lb-prev"
+        id="lb-prev"
+        type="button"
+        aria-label="Anterior"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M15 6 9 12l6 6" />
+        </svg>
+      </button>
+      <!-- sin src hasta que se abre: un src="" hace que el navegador vuelva a pedir la página -->
+      <img id="lb-img" alt="" />
+      <button
+        class="lb-nav lb-sig"
+        id="lb-sig"
+        type="button"
+        aria-label="Siguiente"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m9 6 6 6-6 6" />
+        </svg>
+      </button>
+      <p class="lb-pie" id="lb-pie"></p>
+    </div>
+
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+    <script>
+      (function () {
+        "use strict";
+
+        /* ============================================================
+   1. CALENDLY  —  ⚠️ REEMPLAZAR ESTAS DOS DIRECCIONES
+   Crea en Calendly dos tipos de cita de 1 hora y pega aquí sus
+   enlaces. Mientras digan "TU-USUARIO", la página muestra el
+   panel de WhatsApp en lugar del calendario. Ver LEEME.md
+   ============================================================ */
+        var CALENDLY = {
+          video: "https://calendly.com/TU-USUARIO/cita-videollamada",
+          presencial: "https://calendly.com/TU-USUARIO/cita-atelier",
+        };
+
+        var TEL = "+18038468359",
+          WA = "18038468359";
+
+        /* ============================================================
+   2. PRECIOS  —  editar aquí y en ningún otro lado
+   El cobro se redondea HACIA ARRIBA al siguiente tramo:
+   150 invitados pagan la tarifa de 200.
+   Cada par es [hasta cuántos invitados, precio].
+   Silver no tiene tramo arriba de 80: ese caso muestra
+   "Consúltalo en tu cita", nunca un precio inventado.
+   ============================================================ */
+        var PAQUETES = [
+          {
+            id: "silver",
+            nombre: "Silver",
+            cuota: 1000,
+            tramos: [
+              [30, 2500],
+              [50, 2800],
+              [80, 3500],
+            ],
+          },
+          {
+            id: "gold",
+            nombre: "Gold",
+            cuota: 1500,
+            tramos: [
+              [100, 4500],
+              [200, 5800],
+              [300, 6800],
+            ],
+          },
+          {
+            id: "diamond",
+            nombre: "Diamond",
+            cuota: 2000,
+            tramos: [
+              [100, 7800],
+              [200, 8800],
+              [300, 9800],
+            ],
+            destacado: true,
+          },
+          {
+            id: "royal",
+            nombre: "Royal Signature",
+            cuota: 2500,
+            tramos: [
+              [100, 9900],
+              [200, 11300],
+              [300, 12800],
+            ],
+          },
+        ];
+
+        function tarifa(paq, invitados) {
+          for (var i = 0; i < paq.tramos.length; i++) {
+            if (invitados <= paq.tramos[i][0])
+              return { precio: paq.tramos[i][1], tope: paq.tramos[i][0] };
+          }
+          return null; // fuera de los tramos que existen
+        }
+        var dinero = function (n) {
+          return "$" + n.toLocaleString("en-US");
+        };
+
+        /* ============================================================
+   3. FOTOS
+   ============================================================ */
+        var FOTOS = [
+          [
+            "hero-vestido-azul-floral",
+            "Vestido azul con apliques florales dorados",
+            "Blue gown with gold floral appliqué",
+          ],
+          [
+            "vestido-negro",
+            "Vestido negro con capa de tul",
+            "Black gown with tulle cape",
+          ],
+          [
+            "vestido-esmeralda",
+            "Vestido verde esmeralda bordado en oro",
+            "Emerald gown with gold embroidery",
+          ],
+          [
+            "vestido-amarillo",
+            "Vestido amarillo con ramo de rosas rojas",
+            "Yellow gown with red rose bouquet",
+          ],
+          [
+            "vestido-azul-capa",
+            "Vestido azul claro con capa de tul",
+            "Light blue gown with tulle cape",
+          ],
+          [
+            "vestido-rosa-atardecer",
+            "Vestido rosa con cola larga al atardecer",
+            "Pink gown with long train at sunset",
+          ],
+          [
+            "vestido-blanco-rosa",
+            "Vestido blanco con apliques florales rosa",
+            "White gown with pink floral appliqué",
+          ],
+          [
+            "vestido-morado",
+            "Vestido morado con encaje plateado",
+            "Purple gown with silver lace",
+          ],
+          [
+            "salon-xv-verde-oro",
+            "Salón decorado en verde y oro con pista de baile",
+            "Venue styled in emerald and gold with dance floor",
+          ],
+          [
+            "accesorios-corona",
+            "Set de accesorios: corona, copas y libro de firmas",
+            "Accessory set: crown, glasses and guest book",
+          ],
+          [
+            "corona-detalle",
+            "Corona de cristales negros en detalle",
+            "Black crystal crown, close up",
+          ],
+        ];
+
+        /* ============================================================
+   4. TEXTOS  —  español e inglés
+   ============================================================ */
+        var T = {
+          es: {
+            saltoCita: "Ir a agendar mi cita",
+            marcaSub: "Fashion Design",
+            ctaBarra: "Agendar",
+            heroCejilla: "Atelier de alta costura · Columbia, SC",
+            heroTitulo:
+              "Tu vestido no existe todavía. <em>Lo diseñamos juntas.</em>",
+            heroCta: "Agenda tu cita",
+            heroM1: "Videollamada o presencial",
+            heroM2: "1 hora con la diseñadora",
+            heroM3: "Sin costo",
+            galCejilla: "Nuestro trabajo",
+            galTitulo: "Cada uno, hecho una sola vez.",
+            galSub: "Vestidos y montajes reales, salidos de este taller.",
+            paqCejilla: "Paquetes",
+            paqTitulo: "Todo para tus XV, en un solo lugar.",
+            paqSub:
+              "Vestido y decoración juntos. Mueve el control para ver tu precio.",
+            deslLabel: "Invitados que esperas",
+            paqNota:
+              "Carpa, mesas y sillas incluidas en cualquier paquete, si tu evento las necesita.",
+            citaCejilla: "La cita",
+            citaTitulo: "Una hora que lo define todo.",
+            paso1t: "Videollamada o presencial",
+            paso1p:
+              "Desde tu casa, estés donde estés, o en el atelier tomando café con Lucero.",
+            paso2t: "1 hora completa",
+            paso2p:
+              "Hablamos de tu tema, tus colores y tu presupuesto. Sin prisa y sin guion de ventas.",
+            paso3t: "Sin costo ni compromiso",
+            paso3p:
+              "Sales con tu cotización en la mano, decidas contratar o no.",
+            calCejilla: "Agenda",
+            calTitulo: "Elige tu día y tu hora.",
+            calSub:
+              "Citas de 1 hora. Recibes confirmación y recordatorio automáticos.",
+            calTipoVideo: "Por videollamada",
+            calTipoPres: "En el atelier",
+            calEsperaT: "Aquí va el calendario de reservas",
+            calEsperaP:
+              "El calendario todavía no está conectado. Mientras tanto, escríbenos y agendamos tu cita al momento.",
+            calEsperaWa: "Escribir por WhatsApp",
+            calEsperaTel: "Llamar ahora",
+            pieLema:
+              "Vestidos de quinceañera a la medida y decoración de evento. Diseñados y confeccionados por Lucero Ortega Viana.",
+            pieContacto: "Contacto",
+            pieAtelier: "Atelier",
+            pieCorreo: "Correo — pendiente",
+            pieDir: "Dirección — pendiente",
+            pieHorario: "Horarios — pendiente",
+            pieCitas: "Atención con cita previa",
+            movilLlamar: "Llamar",
+            movilAgendar: "Agendar cita",
+            verMas: "Ver todo lo que incluye",
+            verMenos: "Ver menos",
+            reservaCon: "Reserva tu fecha con",
+            consulta: "Consúltalo en tu cita",
+            tarifaHasta: "invitados · tarifa de hasta",
+            invitados: "invitados",
+            idealHasta: "Ideal hasta 80 invitados",
+            elegir: "Quiero este paquete",
+            masDiamond: "Todo lo del Diamond, más:",
+            waMsg: "Hola, me gustaría agendar una cita para cotizar mis XV.",
+          },
+          en: {
+            saltoCita: "Skip to booking",
+            marcaSub: "Fashion Design",
+            ctaBarra: "Book",
+            heroCejilla: "Couture atelier · Columbia, SC",
+            heroTitulo:
+              "Your dress doesn’t exist yet. <em>We design it together.</em>",
+            heroCta: "Book your appointment",
+            heroM1: "Video call or in person",
+            heroM2: "1 hour with the designer",
+            heroM3: "Free",
+            galCejilla: "Our work",
+            galTitulo: "Each one, made only once.",
+            galSub: "Real gowns and real setups, straight out of this studio.",
+            paqCejilla: "Packages",
+            paqTitulo: "Everything for your XV, in one place.",
+            paqSub: "Gown and décor together. Slide to see your price.",
+            deslLabel: "Guests you expect",
+            paqNota:
+              "Tent, tables and chairs included with any package, if your event needs them.",
+            citaCejilla: "The appointment",
+            citaTitulo: "One hour that settles everything.",
+            paso1t: "Video call or in person",
+            paso1p:
+              "From home, wherever you are, or at the atelier over coffee with Lucero.",
+            paso2t: "A full hour",
+            paso2p:
+              "We talk theme, colors and budget. No rush, no sales script.",
+            paso3t: "Free, no obligation",
+            paso3p:
+              "You leave with your quote in hand, whether you book or not.",
+            calCejilla: "Booking",
+            calTitulo: "Pick your day and time.",
+            calSub:
+              "One-hour appointments. Confirmation and reminder sent automatically.",
+            calTipoVideo: "By video call",
+            calTipoPres: "At the atelier",
+            calEsperaT: "The booking calendar goes here",
+            calEsperaP:
+              "The calendar isn’t connected yet. In the meantime, message us and we’ll book your appointment right away.",
+            calEsperaWa: "Message on WhatsApp",
+            calEsperaTel: "Call now",
+            pieLema:
+              "Custom quinceañera gowns and event décor. Designed and sewn by Lucero Ortega Viana.",
+            pieContacto: "Contact",
+            pieAtelier: "Atelier",
+            pieCorreo: "Email — pending",
+            pieDir: "Address — pending",
+            pieHorario: "Hours — pending",
+            pieCitas: "By appointment only",
+            movilLlamar: "Call",
+            movilAgendar: "Book now",
+            verMas: "See everything included",
+            verMenos: "See less",
+            reservaCon: "Hold your date with",
+            consulta: "Let’s talk at your appointment",
+            tarifaHasta: "guests · rate for up to",
+            invitados: "guests",
+            idealHasta: "Best for up to 80 guests",
+            elegir: "I want this package",
+            masDiamond: "Everything in Diamond, plus:",
+            waMsg:
+              "Hi! I’d like to book an appointment for a quinceañera quote.",
+          },
+        };
+
+        /* Contenido de cada paquete, tomado de las tarjetas oficiales */
+        var CONTENIDO = {
+          es: {
+            silver: {
+              lema: "Esencial, elegante y completo.",
+              items: [
+                "Vestido a tu medida",
+                "Crinolina",
+                "Corona y ramo a juego",
+                "1 prueba y ajustes finales",
+                "Decoración básica",
+                "Mesa principal",
+                "Backdrop sencillo",
+                "Asesoría de estilo",
+              ],
+              detalle:
+                "<p><b>Vestido a tu medida.</b> Diseñado exclusivamente para ti, con el estilo que siempre soñaste.</p><p><b>Crinolina.</b> Volumen, estructura y ese efecto princesa que hace la diferencia.</p><p><b>Decoración básica.</b> Ambientación elegante para crear un espacio especial y acogedor.</p><p><b>Asesoría de estilo.</b> Te guiamos en cada detalle para que luzcas y te sientas espectacular.</p>",
+            },
+            gold: {
+              lema: "Premium, personalizado y completo.",
+              items: [
+                "Vestido exclusivo personalizado",
+                "Segundo vestido",
+                "Accesorios completos",
+                "Domo 360°",
+                "2 pruebas y ajustes finales",
+                "Silla trono",
+                "Decoración temática",
+              ],
+              detalle:
+                "<p><b>Accesorios completos.</b> Bata, cojín, baúl o libro de firmas, brindis con 4 copas personalizadas, oso o muñeca a juego, ramo y corona.</p><p><b>Domo 360°.</b> Para capturar cada momento de tu celebración de una manera única y divertida.</p><p><b>Segundo vestido.</b> Para que cambies de look y sigas brillando.</p><p><b>Decoración temática.</b> Ambientes diseñados especialmente para reflejar tu historia.</p>",
+            },
+            diamond: {
+              lema: "El más exclusivo y completo.",
+              items: [
+                "Vestido de alta costura único",
+                "Segundo vestido",
+                "Vestido para baile sorpresa",
+                "3 pruebas y ajustes finales",
+                "Todos los accesorios personalizados",
+                "Coordinadora de evento",
+                "Coreografía personalizada",
+                "Pista LED",
+                "Tenis personalizados",
+                "Decoración full de lujo",
+              ],
+              detalle:
+                "<p><b>Coordinadora de evento.</b> Profesional encargada de que todo fluya perfecto, para que tú y tu familia solo disfruten.</p><p><b>Coreografía personalizada.</b> Un baile diseñado especialmente para ti y tus chambelanes.</p><p><b>Pista LED.</b> Iluminación que transforma tu fiesta en una experiencia mágica.</p><p><b>Decoración full de lujo.</b> Ambientes espectaculares y detalles premium de principio a fin.</p>",
+            },
+            royal: {
+              lema: "Una celebración de realeza.",
+              mas: true,
+              items: [
+                "Invitaciones personalizadas",
+                "Recordatorios para tus invitados",
+                "Servicio fotográfico profesional",
+                "DJ profesional",
+                "Domo 360°",
+                "Maestro de ceremonia",
+              ],
+              detalle:
+                "<p><b>Servicio fotográfico profesional.</b> Capturamos cada emoción, cada sonrisa y cada momento inolvidable.</p><p><b>DJ profesional.</b> La mejor música y ambientación para que tu fiesta sea única y memorable.</p><p><b>Maestro de ceremonia.</b> Conduce tu evento con elegancia y profesionalismo, para que todo fluya perfecto.</p><p><b>Invitaciones y recordatorios.</b> Diseños exclusivos que reflejan la esencia de tu gran día.</p>",
+            },
+          },
+          en: {
+            silver: {
+              lema: "Essential, elegant and complete.",
+              items: [
+                "Custom-made gown",
+                "Crinoline",
+                "Matching crown and bouquet",
+                "1 fitting and final alterations",
+                "Basic décor",
+                "Head table",
+                "Simple backdrop",
+                "Style consulting",
+              ],
+              detalle:
+                "<p><b>Custom-made gown.</b> Designed exclusively for you, in the style you always dreamed of.</p><p><b>Crinoline.</b> Volume, structure and that princess effect that makes the difference.</p><p><b>Basic décor.</b> Elegant styling to create a special, welcoming space.</p><p><b>Style consulting.</b> We guide you through every detail so you look and feel spectacular.</p>",
+            },
+            gold: {
+              lema: "Premium, personalized and complete.",
+              items: [
+                "Exclusive custom gown",
+                "Second gown",
+                "Full personalized accessories",
+                "360° dome",
+                "2 fittings and final alterations",
+                "Throne chair",
+                "Themed décor",
+              ],
+              detalle:
+                "<p><b>Full accessories.</b> Robe, pillow, chest or guest book, toast with 4 personalized glasses, matching bear or doll, bouquet and crown.</p><p><b>360° dome.</b> To capture every moment of your celebration in a unique, fun way.</p><p><b>Second gown.</b> Change your look and keep shining.</p><p><b>Themed décor.</b> Settings designed to reflect your story.</p>",
+            },
+            diamond: {
+              lema: "The most exclusive and complete.",
+              items: [
+                "One-of-a-kind couture gown",
+                "Second gown",
+                "Surprise dance gown",
+                "3 fittings and final alterations",
+                "All personalized accessories",
+                "Event coordinator",
+                "Custom choreography",
+                "LED dance floor",
+                "Custom sneakers",
+                "Full luxury décor",
+              ],
+              detalle:
+                "<p><b>Event coordinator.</b> A professional making sure everything runs perfectly, so you and your family just enjoy.</p><p><b>Custom choreography.</b> A dance designed especially for you and your court.</p><p><b>LED dance floor.</b> Lighting that turns your party into a magical experience.</p><p><b>Full luxury décor.</b> Spectacular settings and premium details from start to finish.</p>",
+            },
+            royal: {
+              lema: "A royal celebration.",
+              mas: true,
+              items: [
+                "Personalized invitations",
+                "Favors for your guests",
+                "Professional photography",
+                "Professional DJ",
+                "360° dome",
+                "Master of ceremonies",
+              ],
+              detalle:
+                "<p><b>Professional photography.</b> We capture every emotion, every smile, every unforgettable moment.</p><p><b>Professional DJ.</b> The best music and atmosphere to make your party unique and memorable.</p><p><b>Master of ceremonies.</b> Hosts your event with elegance and professionalism so everything flows.</p><p><b>Invitations and favors.</b> Exclusive designs that reflect the essence of your big day.</p>",
+            },
+          },
+        };
+
+        /* ============================================================
+   5. Arranque
+   ============================================================ */
+        var idioma = "es";
+        try {
+          var g = localStorage.getItem("lov-idioma");
+          if (g === "es" || g === "en") idioma = g;
+        } catch (e) {}
+
+        var $ = function (s) {
+          return document.querySelector(s);
+        };
+        var $$ = function (s) {
+          return Array.prototype.slice.call(document.querySelectorAll(s));
+        };
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* --- Galería --- */
+        var grid = $("#galeria-grid");
+        FOTOS.forEach(function (f, i) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "foto";
+          b.dataset.i = i;
+          b.setAttribute("aria-label", f[1]);
+          b.innerHTML =
+            '<img src="img/' +
+            f[0] +
+            '.webp" alt="' +
+            f[1] +
+            '" loading="lazy" width="1080" height="1440">';
+          grid.appendChild(b);
+        });
+
+        /* --- Paquetes --- */
+        function pintarPaquetes() {
+          var inv = parseInt($("#desl").value, 10);
+          var t = T[idioma],
+            C = CONTENIDO[idioma];
+          $("#paquetes-grid").innerHTML = PAQUETES.map(function (p) {
+            var c = C[p.id],
+              r = tarifa(p, inv),
+              esConsulta = !r;
+            var cifra = esConsulta
+              ? '<div class="paq-cifra consulta">' + t.consulta + "</div>"
+              : '<div class="paq-cifra">' + dinero(r.precio) + "</div>";
+            // Solo se menciona el redondeo cuando de verdad ocurre: si el número
+            // de invitados cae justo en el tramo, "tarifa de hasta 100" sobra.
+            var tramo = esConsulta
+              ? '<span class="paq-tramo">' + t.idealHasta + "</span>"
+              : '<span class="paq-tramo">' +
+                inv +
+                " " +
+                (inv < r.tope ? t.tarifaHasta + " " + r.tope : t.invitados) +
+                "</span>";
+            return (
+              '<article class="paq' +
+              (p.destacado ? " destacado" : "") +
+              (esConsulta ? " apagada" : "") +
+              '">' +
+              (p.destacado ? '<span class="paq-cinta">★</span>' : "") +
+              "<h3>" +
+              p.nombre +
+              "</h3>" +
+              '<p class="lema">' +
+              c.lema +
+              "</p>" +
+              '<div class="paq-precio">' +
+              cifra +
+              tramo +
+              '<span class="paq-cuota">' +
+              t.reservaCon +
+              " " +
+              dinero(p.cuota) +
+              "</span></div>" +
+              (c.mas
+                ? '<p class="paq-tramo" style="margin-top:1.2rem;color:var(--oro-claro)">' +
+                  t.masDiamond +
+                  "</p>"
+                : "") +
+              "<ul>" +
+              c.items
+                .map(function (x) {
+                  return (
+                    '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>' +
+                    x +
+                    "</li>"
+                  );
+                })
+                .join("") +
+              "</ul>" +
+              '<button class="paq-mas" type="button" aria-expanded="false">' +
+              t.verMas +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>' +
+              '<div class="paq-detalle">' +
+              c.detalle +
+              "</div>" +
+              '<a class="btn btn-linea btn-bloque" href="#calendario">' +
+              t.elegir +
+              "</a>" +
+              "</article>"
+            );
+          }).join("");
+        }
+
+        $("#paquetes-grid").addEventListener("click", function (e) {
+          var b = e.target.closest(".paq-mas");
+          if (!b) return;
+          var abierto = b.getAttribute("aria-expanded") === "true";
+          b.setAttribute("aria-expanded", String(!abierto));
+          b.parentNode
+            .querySelector(".paq-detalle")
+            .classList.toggle("visible", !abierto);
+          b.childNodes[0].nodeValue = abierto
+            ? T[idioma].verMas
+            : T[idioma].verMenos;
+        });
+
+        $("#desl").addEventListener("input", function () {
+          $("#desl-num").textContent = this.value;
+          pintarPaquetes();
+        });
+
+        /* --- Idioma --- */
+        function aplicarIdioma() {
+          var t = T[idioma];
+          document.documentElement.lang = idioma;
+          $$("[data-i18n]").forEach(function (el) {
+            var v = t[el.dataset.i18n];
+            if (v === undefined) return;
+            if (v.indexOf("<") !== -1) el.innerHTML = v;
+            else el.textContent = v;
+          });
+          $$(".idioma button").forEach(function (b) {
+            b.setAttribute("aria-pressed", String(b.dataset.lang === idioma));
+          });
+          $$("#galeria-grid .foto").forEach(function (b, i) {
+            var alt = FOTOS[i][idioma === "es" ? 1 : 2];
+            b.setAttribute("aria-label", alt);
+            b.querySelector("img").alt = alt;
+          });
+          $("#cal-wa").href =
+            "https://wa.me/" + WA + "?text=" + encodeURIComponent(t.waMsg);
+          pintarPaquetes();
+        }
+
+        $$(".idioma button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            idioma = b.dataset.lang;
+            try {
+              localStorage.setItem("lov-idioma", idioma);
+            } catch (e) {}
+            aplicarIdioma();
+          });
+        });
+
+        /* --- Lightbox --- */
+        var lb = $("#lb"),
+          lbImg = $("#lb-img"),
+          lbPie = $("#lb-pie"),
+          actual = 0,
+          previo = null;
+
+        function abrirLB(i) {
+          actual = (i + FOTOS.length) % FOTOS.length;
+          var f = FOTOS[actual],
+            alt = f[idioma === "es" ? 1 : 2];
+          lbImg.src = "img/" + f[0] + ".webp";
+          lbImg.alt = alt;
+          lbPie.textContent =
+            alt + "  ·  " + (actual + 1) + " / " + FOTOS.length;
+          lb.classList.add("abierto");
+          document.body.style.overflow = "hidden";
+          $("#lb-cerrar").focus();
+        }
+        function cerrarLB() {
+          lb.classList.remove("abierto");
+          document.body.style.overflow = "";
+          if (previo) previo.focus();
+        }
+        grid.addEventListener("click", function (e) {
+          var b = e.target.closest(".foto");
+          if (!b) return;
+          previo = b;
+          abrirLB(parseInt(b.dataset.i, 10));
+        });
+        $("#lb-cerrar").addEventListener("click", cerrarLB);
+        $("#lb-prev").addEventListener("click", function () {
+          abrirLB(actual - 1);
+        });
+        $("#lb-sig").addEventListener("click", function () {
+          abrirLB(actual + 1);
+        });
+        lb.addEventListener("click", function (e) {
+          if (e.target === lb) cerrarLB();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (!lb.classList.contains("abierto")) return;
+          if (e.key === "Escape") cerrarLB();
+          else if (e.key === "ArrowLeft") abrirLB(actual - 1);
+          else if (e.key === "ArrowRight") abrirLB(actual + 1);
+        });
+
+        /* --- Calendario --- */
+        var tipoCita = "video";
+
+        function calendarioListo() {
+          return (
+            !!window.Calendly && CALENDLY[tipoCita].indexOf("TU-USUARIO") === -1
+          );
+        }
+        function montarCalendario() {
+          var widget = $("#cal-widget"),
+            espera = $("#cal-espera");
+          if (!calendarioListo()) {
+            widget.hidden = true;
+            espera.hidden = false;
+            return;
+          }
+          widget.hidden = false;
+          espera.hidden = true;
+          widget.innerHTML = "";
+          window.Calendly.initInlineWidget({
+            url:
+              CALENDLY[tipoCita] +
+              "?hide_gdpr_banner=1&background_color=0B0B0D&text_color=F4F0E8&primary_color=C9A227",
+            parentElement: widget,
+          });
+        }
+        $$(".cal-tipo button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            tipoCita = b.dataset.tipo;
+            $$(".cal-tipo button").forEach(function (x) {
+              x.setAttribute(
+                "aria-pressed",
+                String(x.dataset.tipo === tipoCita),
+              );
+            });
+            montarCalendario();
+          });
+        });
+        // Cuadrícula decorativa del panel de espera
+        (function () {
+          var r = $(".cal-espera .rejilla");
+          for (var i = 0; i < 35; i++) {
+            var c = document.createElement("i");
+            if ([9, 10, 16, 17, 18, 23, 25, 31].indexOf(i) !== -1)
+              c.className = "on";
+            r.appendChild(c);
+          }
+        })();
+        window.addEventListener("load", function () {
+          setTimeout(montarCalendario, 400);
+        });
+
+        /* --- Aparición al hacer scroll --- */
+        var revs = $$(".rev");
+        if (reduce || !("IntersectionObserver" in window)) {
+          revs.forEach(function (el) {
+            el.classList.add("dentro");
+          });
+        } else {
+          var obs = new IntersectionObserver(
+            function (es) {
+              es.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("dentro");
+                  obs.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -50px 0px" },
+          );
+          revs.forEach(function (el) {
+            obs.observe(el);
+          });
+        }
+
+        $("#anio").textContent = new Date().getFullYear();
+        aplicarIdioma();
+        montarCalendario();
+      })();
+    </script>
+  </body>
+</html>
