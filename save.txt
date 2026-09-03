@@ -6,7 +6,7 @@
     <title>LO-V Fashion Design | Vestidos y Decoración de Quinceañera</title>
     <meta
       name="description"
-      content="Vestidos de quinceañera a tu medida y decoración de evento. Agenda tu cita de cotización con Lucero Ortega Viana — por videollamada, 1 hora, sin costo."
+      content="Vestidos de quinceañera a tu medida y decoración de evento. Agenda tu cita de cotización con Lucero Ortega Viana — videollamada o presencial, 1 hora, sin costo."
     />
     <link rel="icon" href="img/logo-lov.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -784,6 +784,33 @@
         background: var(--superficie);
         border-top: 1px solid var(--linea);
       }
+      .cal-tipo {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .cal-tipo button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.4rem;
+        border: 1px solid var(--linea);
+        border-radius: var(--r-m);
+        font-size: 0.88rem;
+        color: var(--apagado);
+        transition: all 0.2s;
+      }
+      .cal-tipo button svg {
+        width: 17px;
+        height: 17px;
+      }
+      .cal-tipo button[aria-pressed="true"] {
+        border-color: var(--oro);
+        color: var(--oro-claro);
+        background: var(--oro-tenue);
+      }
       .cal-caja {
         max-width: 900px;
         margin-inline: auto;
@@ -988,7 +1015,7 @@
           grid-template-columns: repeat(4, 1fr);
         }
         .paquetes {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
         }
       }
       @media (max-width: 639px) {
@@ -1122,7 +1149,7 @@
                 aria-hidden="true"
               >
                 <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
-              ><span data-i18n="heroM1">Cita por videollamada</span></span
+              ><span data-i18n="heroM1">Videollamada o presencial</span></span
             >
             <span
               ><svg
@@ -1247,10 +1274,10 @@
                   <rect x="2" y="6" width="14" height="12" rx="2" />
                   <path d="m16 11 6-3.5v9L16 13" /></svg
               ></span>
-              <h3 data-i18n="paso1t">Por videollamada</h3>
+              <h3 data-i18n="paso1t">Videollamada o presencial</h3>
               <p data-i18n="paso1p">
-                Desde tu casa, estés donde estés. Solo necesitas tu móvil o tu
-                computadora.
+                Desde tu casa, estés donde estés, o en el atelier tomando café
+                con Lucero.
               </p>
             </div>
             <div class="paso rev">
@@ -1302,9 +1329,41 @@
             <span class="cejilla" data-i18n="calCejilla">Agenda</span>
             <h2 id="cal-h" data-i18n="calTitulo">Elige tu día y tu hora.</h2>
             <p data-i18n="calSub">
-              Citas de 1 hora por videollamada. Recibes confirmación y
-              recordatorio automáticos.
+              Citas de 1 hora. Recibes confirmación y recordatorio automáticos.
             </p>
+          </div>
+
+          <div class="cal-tipo" role="group" aria-label="Tipo de cita">
+            <button type="button" data-tipo="video" aria-pressed="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="2" y="6" width="14" height="12" rx="2" />
+                <path d="m16 11 6-3.5v9L16 13" />
+              </svg>
+              <span data-i18n="calTipoVideo">Por videollamada</span>
+            </button>
+            <button type="button" data-tipo="presencial" aria-pressed="false">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" />
+                <circle cx="12" cy="10" r="2.6" />
+              </svg>
+              <span data-i18n="calTipoPres">En el atelier</span>
+            </button>
           </div>
 
           <div class="cal-caja" id="cal-caja">
@@ -1618,13 +1677,15 @@
         "use strict";
 
         /* ============================================================
-   1. CALENDLY  —  ⚠️ AQUÍ VA EL ENLACE DE LA CITA
-   Todas las citas son por videollamada. Pega el enlace del tipo de
-   cita de 1 hora que tengas creado en Calendly. Mientras diga
-   "TU-USUARIO", la página muestra el panel de WhatsApp en lugar
-   del calendario. Ver LEEME.md
+   1. CALENDLY  —  ⚠️ REEMPLAZAR ESTAS DOS DIRECCIONES
+   Crea en Calendly dos tipos de cita de 1 hora y pega aquí sus
+   enlaces. Mientras digan "TU-USUARIO", la página muestra el
+   panel de WhatsApp en lugar del calendario. Ver LEEME.md
    ============================================================ */
-        var CALENDLY = "https://calendly.com/calovfashiondsg/new-meeting";
+        var CALENDLY = {
+          video: "https://calendly.com/calovfashiondsg/new-meeting",
+          presencial: "https://calendly.com/calovfashiondsg/presencial",
+        };
 
         var TEL = "+18038468359",
           WA = "18038468359";
@@ -1634,10 +1695,20 @@
    El cobro se redondea HACIA ARRIBA al siguiente tramo:
    150 invitados pagan la tarifa de 200.
    Cada par es [hasta cuántos invitados, precio].
-   Un paquete sin tramo para ese número de invitados muestra
+   Silver no tiene tramo arriba de 80: ese caso muestra
    "Consúltalo en tu cita", nunca un precio inventado.
    ============================================================ */
         var PAQUETES = [
+          {
+            id: "silver",
+            nombre: "Silver",
+            cuota: 1000,
+            tramos: [
+              [30, 2500],
+              [50, 2800],
+              [80, 3500],
+            ],
+          },
           {
             id: "gold",
             nombre: "Gold",
@@ -1722,6 +1793,11 @@
             "White gown with pink floral appliqué",
           ],
           [
+            "vestido-morado",
+            "Vestido morado con encaje plateado",
+            "Purple gown with silver lace",
+          ],
+          [
             "salon-xv-verde-oro",
             "Salón decorado en verde y oro con pista de baile",
             "Venue styled in emerald and gold with dance floor",
@@ -1750,7 +1826,7 @@
             heroTitulo:
               "Tu vestido no existe todavía. <em>Lo diseñamos juntas.</em>",
             heroCta: "Agenda tu cita",
-            heroM1: "Cita por videollamada",
+            heroM1: "Videollamada o presencial",
             heroM2: "1 hora con la diseñadora",
             heroM3: "Sin costo",
             galCejilla: "Nuestro trabajo",
@@ -1765,9 +1841,9 @@
               "Carpa, mesas y sillas incluidas en cualquier paquete, si tu evento las necesita.",
             citaCejilla: "La cita",
             citaTitulo: "Una hora que lo define todo.",
-            paso1t: "Por videollamada",
+            paso1t: "Videollamada o presencial",
             paso1p:
-              "Desde tu casa, estés donde estés. Solo necesitas tu móvil o tu computadora.",
+              "Desde tu casa, estés donde estés, o en el atelier tomando café con Lucero.",
             paso2t: "1 hora completa",
             paso2p:
               "Hablamos de tu tema, tus colores y tu presupuesto. Sin prisa y sin guion de ventas.",
@@ -1777,7 +1853,9 @@
             calCejilla: "Agenda",
             calTitulo: "Elige tu día y tu hora.",
             calSub:
-              "Citas de 1 hora por videollamada. Recibes confirmación y recordatorio automáticos.",
+              "Citas de 1 hora. Recibes confirmación y recordatorio automáticos.",
+            calTipoVideo: "Por videollamada",
+            calTipoPres: "En el atelier",
             calEsperaT: "Aquí va el calendario de reservas",
             calEsperaP:
               "El calendario todavía no está conectado. Mientras tanto, escríbenos y agendamos tu cita al momento.",
@@ -1799,7 +1877,7 @@
             consulta: "Consúltalo en tu cita",
             tarifaHasta: "invitados · tarifa de hasta",
             invitados: "invitados",
-            idealHasta: "Cuéntanos cuántos invitados esperas",
+            idealHasta: "Ideal hasta 80 invitados",
             elegir: "Quiero este paquete",
             masDiamond: "Todo lo del Diamond, más:",
             waMsg: "Hola, me gustaría agendar una cita para cotizar mis XV.",
@@ -1812,7 +1890,7 @@
             heroTitulo:
               "Your dress doesn’t exist yet. <em>We design it together.</em>",
             heroCta: "Book your appointment",
-            heroM1: "Appointment by video call",
+            heroM1: "Video call or in person",
             heroM2: "1 hour with the designer",
             heroM3: "Free",
             galCejilla: "Our work",
@@ -1826,9 +1904,9 @@
               "Tent, tables and chairs included with any package, if your event needs them.",
             citaCejilla: "The appointment",
             citaTitulo: "One hour that settles everything.",
-            paso1t: "By video call",
+            paso1t: "Video call or in person",
             paso1p:
-              "From home, wherever you are. All you need is your phone or laptop.",
+              "From home, wherever you are, or at the atelier over coffee with Lucero.",
             paso2t: "A full hour",
             paso2p:
               "We talk theme, colors and budget. No rush, no sales script.",
@@ -1838,7 +1916,9 @@
             calCejilla: "Booking",
             calTitulo: "Pick your day and time.",
             calSub:
-              "One-hour video-call appointments. Confirmation and reminder sent automatically.",
+              "One-hour appointments. Confirmation and reminder sent automatically.",
+            calTipoVideo: "By video call",
+            calTipoPres: "At the atelier",
             calEsperaT: "The booking calendar goes here",
             calEsperaP:
               "The calendar isn’t connected yet. In the meantime, message us and we’ll book your appointment right away.",
@@ -1860,7 +1940,7 @@
             consulta: "Let’s talk at your appointment",
             tarifaHasta: "guests · rate for up to",
             invitados: "guests",
-            idealHasta: "Tell us how many guests you expect",
+            idealHasta: "Best for up to 80 guests",
             elegir: "I want this package",
             masDiamond: "Everything in Diamond, plus:",
             waMsg:
@@ -1871,6 +1951,21 @@
         /* Contenido de cada paquete, tomado de las tarjetas oficiales */
         var CONTENIDO = {
           es: {
+            silver: {
+              lema: "Esencial, elegante y completo.",
+              items: [
+                "Vestido a tu medida",
+                "Crinolina",
+                "Corona y ramo a juego",
+                "1 prueba y ajustes finales",
+                "Decoración básica",
+                "Mesa principal",
+                "Backdrop sencillo",
+                "Asesoría de estilo",
+              ],
+              detalle:
+                "<p><b>Vestido a tu medida.</b> Diseñado exclusivamente para ti, con el estilo que siempre soñaste.</p><p><b>Crinolina.</b> Volumen, estructura y ese efecto princesa que hace la diferencia.</p><p><b>Decoración básica.</b> Ambientación elegante para crear un espacio especial y acogedor.</p><p><b>Asesoría de estilo.</b> Te guiamos en cada detalle para que luzcas y te sientas espectacular.</p>",
+            },
             gold: {
               lema: "Premium, personalizado y completo.",
               items: [
@@ -1918,6 +2013,21 @@
             },
           },
           en: {
+            silver: {
+              lema: "Essential, elegant and complete.",
+              items: [
+                "Custom-made gown",
+                "Crinoline",
+                "Matching crown and bouquet",
+                "1 fitting and final alterations",
+                "Basic décor",
+                "Head table",
+                "Simple backdrop",
+                "Style consulting",
+              ],
+              detalle:
+                "<p><b>Custom-made gown.</b> Designed exclusively for you, in the style you always dreamed of.</p><p><b>Crinoline.</b> Volume, structure and that princess effect that makes the difference.</p><p><b>Basic décor.</b> Elegant styling to create a special, welcoming space.</p><p><b>Style consulting.</b> We guide you through every detail so you look and feel spectacular.</p>",
+            },
             gold: {
               lema: "Premium, personalized and complete.",
               items: [
@@ -2172,8 +2282,12 @@
         });
 
         /* --- Calendario --- */
+        var tipoCita = "video";
+
         function calendarioListo() {
-          return !!window.Calendly && CALENDLY.indexOf("TU-USUARIO") === -1;
+          return (
+            !!window.Calendly && CALENDLY[tipoCita].indexOf("TU-USUARIO") === -1
+          );
         }
         function montarCalendario() {
           var widget = $("#cal-widget"),
@@ -2188,11 +2302,23 @@
           widget.innerHTML = "";
           window.Calendly.initInlineWidget({
             url:
-              CALENDLY +
+              CALENDLY[tipoCita] +
               "?hide_gdpr_banner=1&background_color=0B0B0D&text_color=F4F0E8&primary_color=C9A227",
             parentElement: widget,
           });
         }
+        $$(".cal-tipo button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            tipoCita = b.dataset.tipo;
+            $$(".cal-tipo button").forEach(function (x) {
+              x.setAttribute(
+                "aria-pressed",
+                String(x.dataset.tipo === tipoCita),
+              );
+            });
+            montarCalendario();
+          });
+        });
         // Cuadrícula decorativa del panel de espera
         (function () {
           var r = $(".cal-espera .rejilla");
